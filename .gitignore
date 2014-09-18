@@ -1,0 +1,11 @@
+.DS_Store
+.pukecache/
+*.sublime-project
+*.sublime-workspace
+*.pyc
+config.yaml
+/build/
+/tmp/
+*.iml
+.idea
+/lib/

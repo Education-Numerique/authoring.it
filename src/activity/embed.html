@@ -1,0 +1,132 @@
+<!doctype html public "✰">
+<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>   <html lang="en-us" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en-us" class="no-js "> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="miniboot.ico">
+
+  <!--
+  This is a placeholder stylesheet meant to
+  provide *default* styles to be displayed while the app boots-up
+  -->
+  <style type="text/css">
+    /* This is meant only to style no-javascript browsers error */
+    noscript > p{
+      padding: 8px 35px 8px 14px;
+      margin-bottom: 18px;
+      color: #c09853;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      background-color: #fcf8e3;
+      border: 1px solid #fbeed5;
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+      color: #b94a48;
+      background-color: #f2dede;
+      border-color: #eed3d7;
+      text-align: center;
+    }
+
+    /* Match the product background-color */
+    body {
+      background-color: #444444;
+    }
+
+    /* Placeholders should be hidden once we remove the no-js class */
+    body > p{
+      display: none;
+    }
+
+    /* Show the throbber until the app finishes booting and remove the no-js class */
+    .no-js body > p{
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -90px;
+      left: 50%;
+      margin-left: -78px;
+      display: block;
+    }
+
+    html .unsupported-browser{
+      display: none;
+    }
+
+    html:not(.ie6):not(.ie7):not(.ie8).unsupported-browser .unsupported-browser{
+      display: block;
+    }
+
+  </style>
+
+  <title dir="ltr">Activité Éducation et Numérique</title>
+  <meta name="description" content="Environnement auteur Éducation et Numérique">
+  <meta name="author" content="E&amp;N">
+
+  <!--
+ * @file
+ * @summary Bootstrap html nutshell
+   *
+ * @author {PUKE-RIGHTS-AUTHOR}
+ * @version {PUKE-PACKAGE-VERSION}
+ *
+ * @license {PUKE-RIGHTS-LICENSE}.
+ * @copyright {PUKE-RIGHTS-COPYRIGHT}
+ * @name {PUKE-GIT-ROOT}/miniboot/index.html{PUKE-GIT-REVISION}
+  -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45773757-1', 'education-et-numerique.fr');
+  ga('send', 'pageview');
+</script>
+
+</head>
+<body id="lxxlroot">
+  <!-- Browsers with no javascript support will see this -->
+  <noscript>
+    <p>
+      <strong>Merci d'activer Javascript pour utiliser cette application, puis recharger.</strong>
+    </p>
+  </noscript>
+
+  <!-- oldIES get here -->
+  <!--[if lt IE 9]>
+    <p class="alert alert-error" id="very-outdated-browser">
+    <strong>
+    Votre navigateur est obsolète. Vous devriez <a href="http://browsehappy.com/">vraiment le mettre à jour.</a>, ou <a href="//www.google.com/chromeframe/?redirect=true">installer Google Chrome Frame</a>.
+    </strong>
+    </p>
+  <![endif]-->
+
+  <section style="position: fixed; bottom: 0; text-align: center; z-index: 1000;" class="unsupported-browser row-fluid">
+    <!-- Everything but Chrome and Firefox (and old IEs) will get this -->
+    <p class="alert alert-error">
+      <button class="close" data-dismiss="alert">×</button>
+      <strong>
+      Votre navigateur n'est peut-être pas pris en charge...<br/><a href="http://www.mozilla.org/fr/firefox/new/">Firefox ESR (et supérieur)</a> et <a href="https://www.google.com/intl/fr/chrome/browser/?hl=fr">Google Chrome</a> sont les seuls navigateurs officiellement supportés par cette application.<br/>
+      Les derniers Safari et Opera devraient fonctionner correctement cependant.<br />
+      Pour tout autre navigateur, certaines fonctionnalités peuvent ne pas être opérationnelles, ou le produit pourrait ne pas fonctionner du tout...
+      </strong>
+    </p>
+  </section>
+
+  <!-- Throbber image displayed while the application boots-up -->
+  <p>
+    <img src="miniboot.png" />
+  </p>
+
+  <!-- jsBoot loader inclusion point -->
+  <script type="text/javascript" src="{JSBOOT}"></script>
+  <!-- Application script bootstrapper -->
+  <script type="text/javascript" src="miniboot-min.js"></script>
+</body>
+</html>
